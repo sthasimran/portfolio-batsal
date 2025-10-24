@@ -1,9 +1,22 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import Sidebar from '@/components/Sidebar';
+import Home from '@/components/Home';
+import About from '@/components/About';
+import Works from '@/components/Works';
+import Contact from '@/components/Contact';
+
+export default function Page() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      hhhh
+    <div className="relative">
+      <Sidebar />
+      
+      <main className="md:ml-40">
+        <Home />
+        <About />
+        <Works />
+        <Contact />
+      </main>
     </div>
   );
 }
